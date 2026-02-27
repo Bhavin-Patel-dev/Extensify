@@ -139,7 +139,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 🙏 Acknowledgements
 
-- Background images powered by [Unsplash](https://unsplash.com/)
+- Background images powered by [Pexels](https://www.pexels.com/)
 - Inspired by and built with guidance from [GeeksforGeeks](https://www.geeksforgeeks.org/) Project-Based Learning.
 
 ---
