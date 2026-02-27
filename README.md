@@ -1,61 +1,151 @@
-# Extensify New Tab Broswer Extension
+## 📖 Introduction
 
-[Extensify](https://extensry.netlify.app/) is a super cool browser extension that greets you with a message according to the time of the day and shows different background on page refresh. With Extensry you can set your main/focus task of the day ansd also create your own todo.
+Extensify is a smart and visually delightful browser extension that transforms your new tab page into a personalized productivity dashboard. Each time you refresh the tab, Extensify welcomes you with a time-aware greeting - Good Morning, Good Afternoon, or Good Evening - paired with a fresh, soothing background image to set the right tone for your session. Beyond the aesthetics, it helps you stay on track with a daily focus task and a persistent to-do list, so your priorities are always front and center.
 
+Whether you're a developer, student, or professional - Extensify turns every refresh into a calm, intentional reset for your day.
 
-## List of features
-[Home Page](https://extensry.netlify.app/)
-- In the home page, you can start by adding your name and then press the enter key which will route you to the task page. If you refresh the home page you will see a different soothing background image.
+---
 
-Task Page
--   In the task page, you can add your main/focus task of the day, once you complete the task you can eihter check it or clear it to create a new task. There is a beautiful ToDo at the bottom right of the page that let's you add todos. When the dat changes the main task will be deleted but the todo will still be there.
+## ✨ Key Features
 
+- **🌅 Time-Aware Greetings** - Personalized greeting messages based on the time of day (morning, afternoon, evening).
 
-## Tech Stack
+- **🖼️ Dynamic Backgrounds** - A new beautiful, soothing background image appears every time you refresh the page.
 
-- HTML/CSS
-- ReactJs
+- **👤 Personalized Welcome** - Enter your name on the home page and get a customized greeting routed to your task dashboard.
 
-## Author
+- **🎯 Daily Focus Task** - Set one main focus task for the day. Check it off or clear it to set a new goal. Automatically resets at midnight so you always start fresh.
 
--   Prakash Sakari - follow me on 👇
--   [GitHub](https://www.github.com/prakashsakari)
--   [LinkedIn](https://www.linkedin.com/in/prakashsakari/)
--   [Twitter](https://twitter.com/prakashsakari)
+- **✅ Persistent To-Do List** - A built-in to-do list in the bottom right that persists even when the day changes — your pending tasks are never lost.
 
+---
 
-## Live Link
+## 🛠️ Tech Stack
 
-https://extensry.netlify.app/
+| Technology            | Purpose                                       |
+| --------------------- | --------------------------------------------- |
+| **React.js**          | Component-based UI and state management       |
+| **JavaScript (ES6+)** | Core logic, local storage, date/time handling |
+| **CSS3**              | Styling, animations, and responsive layout    |
+| **HTML5**             | Semantic structure and extension entry point  |
 
-## Add Extension to Firefox
+---
 
-https://addons.mozilla.org/en-US/firefox/addon/prakash-extensry/
+## 🚀 Getting Started
 
+### Prerequisites
 
-## Run Locally
+Make sure you have the following installed:
 
-Clone the project by adding the following command in the terminal.
-Make sure your have git installed and added to path.
+- [Node.js](https://nodejs.org/) (v14 or above)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Git](https://git-scm.com/)
 
-```bash
-  git clone https://github.com/prakashsakari/browser-extension.git
-```
+### Installation & Local Setup
 
-Go to the project directory
-
-```bash
-  cd browser-extension
-```
-
-Install dependencies
+1. **Clone the repository**
 
 ```bash
-  npm install
+git clone https://github.com/Bhavin-Patel-dev/Extensify.git
 ```
 
-Start the server
+2. **Navigate to the project directory**
 
 ```bash
-  npm start
+cd Extensify
 ```
+
+3. **Install dependencies**
+
+```bash
+npm install
+```
+
+4. **Start the development server**
+
+```bash
+npm start
+```
+
+The app will open at `http://localhost:3000` in your browser.
+
+---
+
+## 📁 Project Structure
+
+```
+Extensify/
+├── public/
+│   ├── favicon.ico               # App favicon
+│   └── index.html                # HTML entry point
+├── src/
+│   ├── components/
+│   │   └── Todo/
+│   │       ├── Todo.jsx          # Todo component
+│   │       └── Todo.css          # Todo styles
+│   ├── context/
+│   │   └── browser-context.js    # React context for global state
+│   ├── db/
+│   │   ├── images.js             # Background images data
+│   │   └── quotes.js             # Quotes / greeting data
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.js           # Home page (name entry)
+│   │   │   └── Home.css          # Home page styles
+│   │   └── Task/
+│   │       ├── Task.js           # Task/dashboard page
+│   │       └── Task.css          # Task page styles
+│   │   └── index.js              # Pages entry / routing
+│   ├── reducer/
+│   │   └── browser-reducer.js    # State reducer logic
+│   ├── styles/
+│   │   └── utility.css           # Shared utility styles
+│   ├── App.js                    # Root component & routing
+│   ├── App.css                   # Root styles
+│   └── index.js                  # ReactDOM entry point
+├── package.json
+└── README.md
+```
+
+---
+
+## 🧠 Learning Outcomes
+
+Building Extensify offered hands-on experience across several important areas of modern web development:
+
+- **React Fundamentals** - Deepened understanding of functional components, props, state, and the React component lifecycle through building a multi-page SPA.
+
+- **React Router** - Learned client-side routing to navigate between the home (name entry) page and the task dashboard without a full page reload.
+
+- **Local Storage & Persistence** - Implemented data persistence using the browser's `localStorage` API to maintain to-do items across sessions while resetting the daily task on day change.
+
+- **Date & Time Manipulation** - Worked with JavaScript's `Date` object to conditionally render greetings and handle daily task resets automatically.
+
+- **CSS Styling** - Crafted a clean, modern UI with dynamic background images and that works well as a new tab page.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+---
+
+## 🙏 Acknowledgements
+
+- Background images powered by [Unsplash](https://unsplash.com/)
+- Inspired by and built with guidance from [GeeksforGeeks](https://www.geeksforgeeks.org/) Project-Based Learning.
+
+---
+
+<div align="center">
+  Made with ❤️ using React.js
+  <br/>
+  ⭐ Star this repo if you found it helpful!
+</div>
